@@ -51,6 +51,7 @@ A modern, full-stack telemedicine platform where users can register as patients 
 - npm run dev
 
 # Folder Structure 
+```
 .
 ├── app/                        # App directory
 │   ├── (auth)/                # Auth-related routes (e.g. sign-in, sign-up)
@@ -112,6 +113,8 @@ A modern, full-stack telemedicine platform where users can register as patients 
 ├── middleware.js             # Edge middleware for auth/protection
 ├── next.config.mjs           # Next.js config
 └── README.md
+
+```
 
 # Sharing few Screenshots of work
 
