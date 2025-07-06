@@ -15,5 +15,7 @@
 ## Adding onboarding component
 ![alt text](image-5.png)
 
-### what does layout.js is for
-It wraps whole of our app we might configure authentication or data base we might configure it over here
+## Doctor Dashboard
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
