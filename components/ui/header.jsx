@@ -9,16 +9,15 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
-import { checkAndAllocateCredits } from "@/actions/credits";
 import Image from "next/image";
 import { checkUser } from "@/lib/generated/checkUser";
 import { Button } from "./button";
 
 export default async function Header() {
   const user = await checkUser();
-  if (user?.role === "PATIENT") {
-    await checkAndAllocateCredits(user);
-  }
+  // if (user?.role === "PATIENT") {
+  //   await checkAndAllocateCredits(user);
+  // }
 
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-10 supports-[backdrop-filter]:bg-background/60">
