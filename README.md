@@ -7,6 +7,8 @@
 ### Pricing
 ![alt text](image-2.png)
 
+### DB Models 
+![alt text](image-9.png)
 
 ### Neon DB console
 ![alt text](image-3.png)
