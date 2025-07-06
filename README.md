@@ -53,66 +53,67 @@ A modern, full-stack telemedicine platform where users can register as patients 
 # Folder Structure 
 ```
 .
-├── app/                        # App directory
-│   ├── (auth)/                # Auth-related routes (e.g. sign-in, sign-up)
-│   ├── (main)/                # Main app routes
-│   │   ├── admin/             # Admin dashboard pages
-│   │   ├── appointments/      # Appointments booking & management
-│   │   ├── doctor/            # Doctor-specific routes
-│   │   ├── doctors/           # Doctors listing and profiles
-│   │   ├── onboarding/        # New user onboarding flow
-│   │   ├── pricing/           # Pricing information
-│   ├── layout.jsx             # App-wide layout component
-│   ├── page.js                # Rote landing page
+├── app/                        # Next.js App Router directory
+│   ├── (auth)/                 # Auth-related routes (e.g. sign-in, sign-up)
+│   ├── (main)/                 # Main app routes
+│   │   ├── admin/              # Admin dashboard pages
+│   │   ├── appointments/       # Appointment booking & management
+│   │   ├── doctor/             # Doctor-specific routes
+│   │   ├── doctors/            # Doctors listing and profiles
+│   │   ├── onboarding/         # New user onboarding flow
+│   │   ├── pricing/            # Pricing page
+│   ├── layout.jsx              # App-wide layout component
+│   ├── page.js                 # Root landing page
 │
-├── components/                # Shared React components
-│   ├── ui/                    # UI primitives (reusable) Shadcn
-│   │   ├── alert.jsx
-│   │   ├── badge.jsx
-│   │   ├── button.jsx
-│   │   ├── card.jsx
-│   │   ├── dialog.jsx
-│   │   ├── input.jsx
-│   │   ├── label.jsx
-│   │   ├── select.jsx
-│   │   ├── separator.jsx
-│   │   ├── sonner.jsx
-│   │   ├── tabs.jsx
-│   │   └── textarea.jsx
-│   ├── appointment-card.jsx  # Appointment display card
-│   ├── header.jsx            # Top navigation
-│   ├── page-header.jsx       # Page title + breadcrumb
-│   ├── pricing.jsx           # Pricing section component
-│   └── theme-provider.jsx    # Theme provider (Shadcn)
+├── components/                 # Shared React components
+│   ├── appointment-card.jsx    # Appointment display card
+│   ├── header.jsx              # Top navigation bar
+│   ├── page-header.jsx         # Page title and breadcrumb
+│   ├── pricing.jsx             # Pricing section component
+│   └── theme-provider.jsx      # ShadCN theme provider wrapper
 │
-├── hooks/                    # Custom React hooks
+├── ui/                         # UI primitives (ShadCN-based components)
+│   ├── alert.jsx
+│   ├── badge.jsx
+│   ├── button.jsx
+│   ├── card.jsx
+│   ├── dialog.jsx
+│   ├── input.jsx
+│   ├── label.jsx
+│   ├── select.jsx
+│   ├── separator.jsx
+│   ├── sonner.jsx
+│   ├── tabs.jsx
+│   └── textarea.jsx
 │
-├── lib/                      # Server-side utilities & DB logic
-│   ├── checkUser.js          # Middleware for auth/role check
-│   ├── data.js               # Static/shared data
-│   ├── prisma.js             # Prisma client setup
-│   ├── private.key           # Prisma private key
-│   ├── schema.js             # Data validation schemas
-│   ├── specialities.js       # Medical specialties data/config
-│   └── utils.js              # Miscellaneous utility functions
+├── hooks/                      # Custom React hooks
 │
-├── prisma/                   # Prisma schema and migrations
-│   ├── migrations/           # Auto-generated DB migration files
-│   ├── schema.prisma         # Main Prisma schema
-│   └── migration_lock.toml   # Prisma lock file
+├── lib/                        # Server-side utilities and DB logic
+│   ├── checkUser.js            # Middleware for auth/role verification
+│   ├── data.js                 # Static/shared data
+│   ├── prisma.js               # Prisma client instance
+│   ├── private.key             # Prisma private key (if applicable)
+│   ├── schema.js               # Zod/Yup validation schemas
+│   ├── specialities.js         # Medical specialties list/config
+│   └── utils.js                # Miscellaneous utility functions
 │
-├── public/                   # Static files (images, logos, etc.)
+├── prisma/                     # Prisma DB config
+│   ├── migrations/             # Auto-generated migration files
+│   ├── schema.prisma           # Prisma data model schema
+│   └── migration_lock.toml     # Prisma migration lock file
+│
+├── public/                     # Static assets
 │   ├── banner.png
 │   ├── logo.png
 │   └── logo-single.png
 │
-├── .clerk/                   # Clerk config (auth provider)
-├── .next/                    # Next.js build folder
-├── .eslintrc                 # ESLint config
-├── jsconfig.json             # JS path alias config
-├── middleware.js             # Edge middleware for auth/protection
-├── next.config.mjs           # Next.js config
-└── README.md
+├── .clerk/                     # Clerk configuration
+├── .next/                      # Next.js build output
+├── .eslintrc                   # ESLint configuration
+├── jsconfig.json               # JS path aliases
+├── middleware.js               # Edge middleware for auth & protection
+├── next.config.mjs             # Next.js project configuration
+└── README.md                   # Project documentation
 
 ```
 
